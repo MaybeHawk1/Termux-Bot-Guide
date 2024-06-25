@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Roboto Font Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Roboto Font End -->
+    <title>Termux</title>
+</head>
+<body>
+    <div class="content">
 
+    </div>
+    <h1 class="Header_1">
+        How To Run A Discord Bot From Termux
+    </h1>
+    <h4 class="pythonblyat">
+        (Specifically for python bots)
+    </h4>
+    <div class="text">
+        <h2 class="step1">Step 1. Installing Termux</h2>
+        <p>To install termux you need use one of the following links</p>
+        <ul class="links">
+            <li class="termuxGithub"><a href="https://github.com/termux" target="_blank">Termux Github</a></li>
+            <li class="termuxFdroid"><a href="https://f-droid.org/en/" target="_blank">FDroid</a></li>
+        </ul>
+        <p>DO NOT INSTALL TERMUX FROM THE PLAY STORE, The version used there is outdated</p>
+        <p>Before doing that you will need to setup the storage access</p>
+        <div class="code">
+            > termux-setup-storage
+        </div>
+        <p>Run this a couple times untill you get this prompt</p>
+        <div class="code">
+            > It appears that directory '~/storage' already exists.<br>
+            > This script is going to rebuild its structure from scratch, wiping all dangling files. <br>T
+            > The actual storage content IS NOT Going to be deleted <br>
+            <br>
+            <br>
+            > Do you want to continue? (Y/N)
+        </div>
+        
+        <h2>Step 2. Installing Python</h2>
+        <p>Once you have installed termux you need to make sure that python is installed</p>
+        <p>You can do that by using</p>
+        <div class="code">
+            > pkg install python
+        </div>
+        <h2>Step 3. Transferring The Files</h2>
+        <p>If you're using a file that's on github you can use CURL</p>
+        <p>Example: </p>
+        <div class="code">
+            > curl [parameters] [url]
+        </div>
+        <p>If you're not using github you can download the python file then move it to your downloads folder and then access that folder from termux.</p>
+        <p>You can move the file to the Home Directory (~) using the mv command</p>
+        <p>Example: (I'm using main.py as an example here</p>
+        <div class="code">
+            > mv main.py ~
+        </div>
+        <h2>Step 4. Running The Bot</h2>
+        <p>To run your python files you need to run</p>
+        <div class="code">
+            > python main.py &
+        </div>
+        <p>The & sign hides python so you can still use your terminal when running the script</p>
+        <p>(Do not do this on the first run to make sure there is no configuration needed)</p>
+
+        <p>To End The Proccess you need to use the pid your terminal gives you when you run the script with &</p>
+        <p>Example: </p>
+        <div class="code">
+            > pkill [PID]
+        </div>
+        <p>(Without using the square bracket's)</p>
+        <p>If you ran the script without & you can just use ^C (Control-C)</p>
+    </div>
+</body>
+</html>
