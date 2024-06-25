@@ -1,3 +1,8 @@
+@font-face {
+    font-family: casCode
+    src:
+}
+
 body {
     background-color: #303030;
     color: #e6e6df;
